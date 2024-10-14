@@ -1,0 +1,1142 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/static/css/bootstrap-select.min.css">
+    <script src="/static/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+
+    <link rel="stylesheet" href="/static/css/bootstrap-datetimepicker.min.css">
+    <script src="/static/js/moment-with-locales.min.js"></script>
+    <script src="/static/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="/static/js/bootstrap.file-input.js"></script>
+    <script src='/static/js/tablesorter.min.js'></script>
+
+    <link rel="stylesheet" href="/static/css/navbar_style.css">
+
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$']]
+      }
+    };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+        $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            // open or close navbar
+            $('#sidebar').toggleClass('active');
+            $('#content').toggleClass('pos');
+            // close dropdowns
+            $('.collapse.in').toggleClass('in');
+            // and also adjust aria-expanded attributes we use for the open/closed arrows
+            // in our CSS
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+    </script>
+
+
+    <style type='text/css'>
+        .content {
+            max-width: 800px;
+            padding-top: 9px;
+            padding-left: 15px;
+        }
+        .wide-content {
+            width: 1000px;
+            padding-top: 9px;
+            padding-left: 15px;
+        }
+        .fullwide-content {
+            width: 100%;
+            padding-top: 9px;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+<nav id="sidebar" style="overflow:auto">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+        <h4 style="text-align: center">Григорий</h4>
+    </div>
+
+     <!-- Sidebar Links -->
+    <ul class="list-unstyled components">
+        <!-- Link with dropdown items -->
+<li>
+<a class="const-grey" class="const-grey" href="#left_drop_down" data-toggle="collapse" aria-expanded="false">
+        Машинное обучение 2023-2024
+</a>
+<ul class="collapse list-unstyled" id="left_drop_down">
+            <li><a class="const-grey" href="/course/13/info">Глубокое обучение 2024-2025</a></li>
+
+        <li class="separator"></li>
+
+
+
+
+        <li><a class="const-grey" href="/add_user_to_course">Присоединиться к курсу</a></li>
+
+
+
+
+
+
+</ul>
+</li><li>
+    <a class="const-grey" href='/course/7/info'>
+        Материалы
+    </a>
+</li>
+<li class="separator"></li>
+<li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/1'>
+                1. [Base] Введение в Python.1-5
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/2'>
+                2. [Base] Введение в Python.6
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/3'>
+                3. [Base] Введение в Python.7
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/4'>
+                4. numpy-pandas-matplotlib (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/5'>
+                5. numpy-pandas-matplotlib (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/6'>
+                6. KNN (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/7'>
+                7. KNN (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/8'>
+                8. Тест №1 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/9'>
+                9. Тест №1 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/10'>
+                10. Тест №1 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/11'>
+                11. Linear models: regression (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/12'>
+                12. Linear models: classification (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/13'>
+                13. Linear models (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/14'>
+                14. Основы SVM (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/15'>
+                15. Основы SVM (ML)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/16'>
+                16. Тест №2 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/17'>
+                17. Тест №2 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/18'>
+                18. Тест №3 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/19'>
+                19. Тест №3 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/20'>
+                20. Тест №4 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/21'>
+                21. Тест №4 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/22'>
+                22. Тест №4 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/23'>
+                23. Зачетный тест (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/24'>
+                24. Зачетный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/25'>
+                25. Зачетный тест (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/26'>
+                26. Зачетный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/27'>
+                27. Зачетный тест (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/28'>
+                28. Зачетный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/29'>
+                29. Зачетный тест (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/30'>
+                30. Деревья решений (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/31'>
+                31. Деревья решений (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/32'>
+                32. Деревья решений (ML)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/33'>
+                33. Град. бустинг (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/34'>
+                34. Град. бустинг (ML)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/35'>
+                35. Тест №6 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/36'>
+                36. Тест №6 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/37'>
+                37. Тест №6 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/38'>
+                38. Кластеризация (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/39'>
+                39. Кластеризация (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/40'>
+                40. Контест (Spotify recommendations)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/41'>
+                41. Тест №7 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/42'>
+                42. Тест №7 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/43'>
+                43. Тест №7 (3й поток)
+            </a>
+        </li>
+        <li class='active'>
+            <a class="const-grey"  href='/course/7/task/44'>
+                44. Частичное Обучение (notebook) [2023-2024]
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/45'>
+                45. Частичное Обучение (unit-tests) [2023-2024]
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/46'>
+                46. Тест №8 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/47'>
+                47. Тест №8 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/48'>
+                48. Тест №8 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/49'>
+                49. Экзаменационный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/50'>
+                50. Экзаменационный тест (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/51'>
+                51. Экзаменационный тест (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/52'>
+                52. Экзаменационный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/53'>
+                53. Экзаменационный тест (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/54'>
+                54. Экзаменационный тест (3й поток)
+            </a>
+        </li>
+</li>
+<li class="separator"></li>        <li>
+            <a class="const-grey" href='/course/7/standings'>
+                Таблица результатов
+            </a>
+        </li>
+<li>
+    <a class="const-grey" href='/logout'>Выйти</a>
+</li>    </ul>
+</nav>
+<div id="content">
+        <button type="button" id="sidebarCollapse" class="btn navbar-btn"
+                style="outline: none;
+                margin-left: -35px;
+                background-color: #337ab7;
+                color: #ffffff;
+                padding: 7px;
+                position: fixed;
+">
+            <span class="glyphicon glyphicon-align-left" style=""></span>
+        </button>         <!-- Page Content -->
+<div class='content'>
+    <h4>Инструкция по рецензированию</h4>
+        <p>
+        
+        </p>
+
+        <h4>Файлы решения</h4>
+                <a href='/solution_file/42753/notebook.ipynb'>
+                    notebook.ipynb
+                </a>
+        <br><br>
+
+        <h4>Рецензии</h4>
+
+            <table class="table">
+                <tr><td><b>Задание 1.5</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            1.0
+                            балл<br>
+                            Есть график в соответствии с условием для Исходные признаки + LogisticRegression. Лучшее качество не хуже 50%<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                                        <a href="#" class="rater_3 btn btn-default">
+                                                Рецензия №4
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.5
+                            баллов<br>
+                            Есть график в соответствии с условием для Исходные признаки + LogisticRegression. Лучшее качество не хуже 45%<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Другое<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Задание 1.5 </b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            1.0
+                            балл<br>
+                            Есть график в соответствии с условием для Исходные признаки + SelfTrainingClassifier. Лучшее качество не хуже 50%<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                                        <a href="#" class="rater_3 btn btn-default">
+                                                Рецензия №4
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.5
+                            баллов<br>
+                            Есть график в соответствии с условием для Исходные признаки + SelfTrainingClassifier. Лучшее качество не хуже 45%<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Другое<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Задание 1.5 </b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            1.0
+                            балл<br>
+                            Есть график в соответствии с условием для Исходные признаки + KMeansClassifier. Лучшее качество не хуже 40%<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                                        <a href="#" class="rater_3 btn btn-default">
+                                                Рецензия №4
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.5
+                            баллов<br>
+                            Есть график в соответствии с условием для Исходные признаки + KMeansClassifier. Лучшее качество не хуже 35%<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Другое<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Задание 1.5 </b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            2.0
+                            балла<br>
+                            Есть график в соответствии с условием для UMAP + LogisticRegression. Лучшее качество не хуже 62%<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                                        <a href="#" class="rater_3 btn btn-default">
+                                                Рецензия №4
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            1.0
+                            балл<br>
+                            Есть график в соответствии с условием для UMAP + LogisticRegression. Лучшее качество не хуже 57%<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Другое<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Задание 1.5 Есть график в соответствии с условием для UMAP + SelfTrainingClassifier. Лучшее качество не хуже 62%</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            2.0
+                            балла<br>
+                            Есть график в соответствии с условием для UMAP + SelfTrainingClassifier. Лучшее качество не хуже 62%<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                                        <a href="#" class="rater_3 btn btn-default">
+                                                Рецензия №4
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            1.0
+                            балл<br>
+                            Есть график в соответствии с условием для UMAP + SelfTrainingClassifier. Лучшее качество не хуже 57%<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Другое<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Задание 1.5 </b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            2.0
+                            балла<br>
+                            Есть график в соответствии с условием для UMAP + KMeansClassifier. Лучшее качество не хуже 48%<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                                        <a href="#" class="rater_3 btn btn-default">
+                                                Рецензия №4
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            1.0
+                            балл<br>
+                            Есть график в соответствии с условием для UMAP + KMeansClassifier. Лучшее качество не хуже 43%<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Другое<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Задание 1.6</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            4.0
+                            балла<br>
+                            Указано, что лучшая модель или SelfTrainingClassifier поверх признакового представления UMAP, или LogisticRegression поверх признакового представления UMAP<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                                        <a href="#" class="rater_3 btn btn-default">
+                                                Рецензия №4
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            2.0
+                            балла<br>
+                            Указано другое<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Не сделано<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Задание 1.6</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            5.0
+                            баллов<br>
+                            Указано, что снижение размерности улучшило качество работы всех трёх алгоритмов<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                                        <a href="#" class="rater_3 btn btn-default">
+                                                Рецензия №4
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            3.0
+                            балла<br>
+                            Указано другое с обоснованием<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Не сделано или без обоснования<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Задание 1.7 </b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            6.0
+                            баллов<br>
+                             Есть график с 6 линиями в соответствии с условием. На графике есть легенда. Лучшее качество среди всех моделей больше 80% <br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                                        <a href="#" class="rater_3 btn btn-default">
+                                                Рецензия №4
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            3.0
+                            балла<br>
+                             Есть график, но не везде с соответствии с условиями.  Лучшее качество среди всех моделей больше 75% <br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Другое<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Задание 1.8</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            6.0
+                            баллов<br>
+                            Указано, что при небольшой доле размеченных объектом переход в низкоразмерное пространство улучшает качество работы. Или указано любое другое верное наблюдение<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                                        <a href="#" class="rater_3 btn btn-default">
+                                                Рецензия №4
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            3.0
+                            балла<br>
+                            Указано в целом верное наблюдение, но без явного обоснования на основе экспериментов в предыдущих заданиях<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Не сделано\не осбосновано<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Оцените, насколько понятным для вас был код автора </b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Все понятно<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                                        <a href="#" class="rater_3 btn btn-default">
+                                                Рецензия №4
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            В целом понятно, были неясные места<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Есть, куда расти<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Оцените, насколько понятным для вас было оформление ноутбука автора в целом</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Все понятно<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                                        <a href="#" class="rater_3 btn btn-default">
+                                                Рецензия №4
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            В целом понятно, были неясные места<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Есть, куда расти<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Задание 1.9 Бонус</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            3.0
+                            балла<br>
+                            Выполнено<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                                        <a href="#" class="rater_3 btn btn-default">
+                                                Рецензия №4
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Не выполнено<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+
+        <h4>Комментарии</h4>
+
+        <div class="list-group">
+                <a href="#" class="rater_0 list-group-item">
+                    <h4 class="list-group-item-heading">
+                            Рецензия №1
+                    </h4>
+                    <p class="list-group-item-text"></p>
+                </a>
+                <a href="#" class="rater_1 list-group-item">
+                    <h4 class="list-group-item-heading">
+                            Рецензия №2
+                    </h4>
+                    <p class="list-group-item-text"></p>
+                </a>
+                <a href="#" class="rater_2 list-group-item">
+                    <h4 class="list-group-item-heading">
+                            Рецензия №3
+                    </h4>
+                    <p class="list-group-item-text"></p>
+                </a>
+                <a href="#" class="rater_3 list-group-item">
+                    <h4 class="list-group-item-heading">
+                            Рецензия №4
+                    </h4>
+                    <p class="list-group-item-text"></p>
+                </a>
+        </div>
+</div>
+
+
+<script type='text/javascript'>
+$('input[type=file]').bootstrapFileInput();
+</script>
+
+<script type='text/javascript'>
+    $('.list-group-item').on('click', function() {
+        $this = $(this);
+
+        var need_update = true;
+        if ($this.hasClass('active')) {
+            need_update = false;
+        }
+
+        $('.btn-primary').removeClass('btn-primary');
+        $('.active').removeClass('active');
+
+        if (need_update) {
+            var elements = document.getElementsByClassName($this.attr('class').split(' ')[0]);
+            for(var i = 0; i < elements.length; i++) {
+                if (elements[i].classList.contains('btn')) {
+                    elements[i].classList.add('btn-primary');
+                } else {
+                    elements[i].classList.add('active');
+                }
+            }
+        }
+    });
+
+    $('.btn').on('click', function() {
+        $this = $(this);
+
+        var need_update = true;
+        if ($this.hasClass('btn-primary')) {
+            need_update = false;
+        }
+
+        $('.btn-primary').removeClass('btn-primary');
+        $('.active').removeClass('active');
+
+        if (need_update) {
+            var elements = document.getElementsByClassName($this.attr('class').split(' ')[0]);
+            for(var i = 0; i < elements.length; i++) {
+                if (elements[i].classList.contains('btn')) {
+                    elements[i].classList.add('btn-primary');
+                } else {
+                    elements[i].classList.add('active');
+                }
+            }
+        }
+    });
+</script>
+
+    </div>
+</div>
+    <script type='text/javascript'>
+    $(function () {
+        $('.timepicker').each(function(){
+            $(this).datetimepicker({format: 'DD.MM.YYYY HH:mm'});
+        });
+    });
+    </script>
+</body>
+</html>

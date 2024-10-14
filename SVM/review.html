@@ -1,0 +1,1016 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/static/css/bootstrap-select.min.css">
+    <script src="/static/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+
+    <link rel="stylesheet" href="/static/css/bootstrap-datetimepicker.min.css">
+    <script src="/static/js/moment-with-locales.min.js"></script>
+    <script src="/static/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="/static/js/bootstrap.file-input.js"></script>
+    <script src='/static/js/tablesorter.min.js'></script>
+
+    <link rel="stylesheet" href="/static/css/navbar_style.css">
+
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$']]
+      }
+    };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+        $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            // open or close navbar
+            $('#sidebar').toggleClass('active');
+            $('#content').toggleClass('pos');
+            // close dropdowns
+            $('.collapse.in').toggleClass('in');
+            // and also adjust aria-expanded attributes we use for the open/closed arrows
+            // in our CSS
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+    </script>
+
+
+    <style type='text/css'>
+        .content {
+            max-width: 800px;
+            padding-top: 9px;
+            padding-left: 15px;
+        }
+        .wide-content {
+            width: 1000px;
+            padding-top: 9px;
+            padding-left: 15px;
+        }
+        .fullwide-content {
+            width: 100%;
+            padding-top: 9px;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+<nav id="sidebar" style="overflow:auto">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+        <h4 style="text-align: center">Григорий</h4>
+    </div>
+
+     <!-- Sidebar Links -->
+    <ul class="list-unstyled components">
+        <!-- Link with dropdown items -->
+<li>
+<a class="const-grey" class="const-grey" href="#left_drop_down" data-toggle="collapse" aria-expanded="false">
+        Машинное обучение 2023-2024
+</a>
+<ul class="collapse list-unstyled" id="left_drop_down">
+            <li><a class="const-grey" href="/course/13/info">Глубокое обучение 2024-2025</a></li>
+
+        <li class="separator"></li>
+
+
+
+
+        <li><a class="const-grey" href="/add_user_to_course">Присоединиться к курсу</a></li>
+
+
+
+
+
+
+</ul>
+</li><li>
+    <a class="const-grey" href='/course/7/info'>
+        Материалы
+    </a>
+</li>
+<li class="separator"></li>
+<li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/1'>
+                1. [Base] Введение в Python.1-5
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/2'>
+                2. [Base] Введение в Python.6
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/3'>
+                3. [Base] Введение в Python.7
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/4'>
+                4. numpy-pandas-matplotlib (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/5'>
+                5. numpy-pandas-matplotlib (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/6'>
+                6. KNN (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/7'>
+                7. KNN (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/8'>
+                8. Тест №1 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/9'>
+                9. Тест №1 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/10'>
+                10. Тест №1 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/11'>
+                11. Linear models: regression (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/12'>
+                12. Linear models: classification (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/13'>
+                13. Linear models (unit-tests)
+            </a>
+        </li>
+        <li class='active'>
+            <a class="const-grey"  href='/course/7/task/14'>
+                14. Основы SVM (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/15'>
+                15. Основы SVM (ML)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/16'>
+                16. Тест №2 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/17'>
+                17. Тест №2 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/18'>
+                18. Тест №3 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/19'>
+                19. Тест №3 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/20'>
+                20. Тест №4 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/21'>
+                21. Тест №4 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/22'>
+                22. Тест №4 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/23'>
+                23. Зачетный тест (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/24'>
+                24. Зачетный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/25'>
+                25. Зачетный тест (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/26'>
+                26. Зачетный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/27'>
+                27. Зачетный тест (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/28'>
+                28. Зачетный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/29'>
+                29. Зачетный тест (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/30'>
+                30. Деревья решений (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/31'>
+                31. Деревья решений (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/32'>
+                32. Деревья решений (ML)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/33'>
+                33. Град. бустинг (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/34'>
+                34. Град. бустинг (ML)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/35'>
+                35. Тест №6 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/36'>
+                36. Тест №6 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/37'>
+                37. Тест №6 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/38'>
+                38. Кластеризация (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/39'>
+                39. Кластеризация (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/40'>
+                40. Контест (Spotify recommendations)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/41'>
+                41. Тест №7 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/42'>
+                42. Тест №7 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/43'>
+                43. Тест №7 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/44'>
+                44. Частичное Обучение (notebook) [2023-2024]
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/45'>
+                45. Частичное Обучение (unit-tests) [2023-2024]
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/46'>
+                46. Тест №8 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/47'>
+                47. Тест №8 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/48'>
+                48. Тест №8 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/49'>
+                49. Экзаменационный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/50'>
+                50. Экзаменационный тест (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/51'>
+                51. Экзаменационный тест (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/52'>
+                52. Экзаменационный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/53'>
+                53. Экзаменационный тест (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/54'>
+                54. Экзаменационный тест (3й поток)
+            </a>
+        </li>
+</li>
+<li class="separator"></li>        <li>
+            <a class="const-grey" href='/course/7/standings'>
+                Таблица результатов
+            </a>
+        </li>
+<li>
+    <a class="const-grey" href='/logout'>Выйти</a>
+</li>    </ul>
+</nav>
+<div id="content">
+        <button type="button" id="sidebarCollapse" class="btn navbar-btn"
+                style="outline: none;
+                margin-left: -35px;
+                background-color: #337ab7;
+                color: #ffffff;
+                padding: 7px;
+                position: fixed;
+">
+            <span class="glyphicon glyphicon-align-left" style=""></span>
+        </button>         <!-- Page Content -->
+<div class='content'>
+    <h4>Инструкция по рецензированию</h4>
+        <p>
+        <p>Выставить баллы в соответствии с разбалловкой в ноутбуке</p>
+        </p>
+
+        <h4>Файлы решения</h4>
+                <a href='/solution_file/36001/Task.ipynb'>
+                    Task.ipynb
+                </a>
+        <br><br>
+
+        <h4>Рецензии</h4>
+
+            <table class="table">
+                <tr><td><b>1. Разделяющая поверхность</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            1.0
+                            балл<br>
+                            Выполнено 2/2 1) построены разделяющие поверхности 2) сделан вывод о том, что rbf лучше разделяет классы в данной выборке<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.5
+                            баллов<br>
+                            Выполнено 1/2 1) построены разделяющие поверхности 2) сделан вывод о том, что rbf лучше разделяет классы в данной выборке<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Выполнено 0/2 1) построены разделяющие поверхности 2) сделан вывод о том, что rbf лучше разделяет классы в данной выборке<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>2. Опорные объекты</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            2.0
+                            балла<br>
+                            Выполнено 2/2 1) Пункт 1. Построены разделяющие поверхности (rbf) на опорных объекта линейной и rbf моделей. Есть вывод о том, что rbf-модель, построенная на опорных объектах линейной модели сильно отличается от первоначальной rbf-модели. 2) Пункт 2. Поверхности построены. Есть вывод о том, что при выкидывании опорных объектов разделяющая поверхность похожа, но чуть отличается на граничных объектах классов <br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            1.0
+                            балл<br>
+                            Выполнено 1/2 1) Пункт 1. Построены разделяющие поверхности (rbf) на опорных объекта линейной и rbf моделей. Есть вывод о том, что rbf-модель, построенная на опорных объектах линейной модели сильно отличается от первоначальной rbf-модели. 2) Пункт 2. Поверхности построены. Есть вывод о том, что при выкидывании опорных объектов разделяющая поверхность похожа, но чуть отличается на граничных объектах классов <br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Выполнено 0/2 1) Пункт 1. Построены разделяющие поверхности (rbf) на опорных объекта линейной и rbf моделей. Есть вывод о том, что rbf-модель, построенная на опорных объектах линейной модели сильно отличается от первоначальной rbf-модели. 2) Пункт 2. Поверхности построены. Есть вывод о том, что при выкидывании опорных объектов разделяющая поверхность похожа, но чуть отличается на граничных объектах классов <br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>3. Форма разделяющей поверхности для несбалансированных классов</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            3.0
+                            балла<br>
+                            Выполнено 2/2 1) Сделаны эксперименты с подбором весов классов 2) Явно показано улучшение на тестовой выборке за счет подбора весов классов<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            1.5
+                            балла<br>
+                            Выполнено 1/2 1) Сделаны эксперименты с подбором весов классов 2) Явно показано улучшение на тестовой выборке за счет подбора весов классов<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Выполнено 0/2 1) Сделаны эксперименты с подбором весов классов 2) Явно показано улучшение на тестовой выборке за счет подбора весов классов<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>4. Влияние гиперпараметров</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            4.0
+                            балла<br>
+                            Выполнено 3/3 1) Обучена модель со скором на кросс-валидации &gt; 0.9 2) В выводе сказано, что выбор гиперпараметров заметно влияет на качество SVM модели 3) В выводе сказано, что выбор гиперпараметров слабо влияет на качество линейной модели.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            2.0
+                            балла<br>
+                            Выполнено 2/3 1) Обучена модель со скором на кросс-валидации &gt; 0.9 2) В выводе сказано, что выбор гиперпараметров заметно влияет на качество SVM модели 3) В выводе сказано, что выбор гиперпараметров слабо влияет на качество линейной модели.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            1.0
+                            балл<br>
+                            Выполнено 1/3 1) Обучена модель со скором на кросс-валидации &gt; 0.9 2) В выводе сказано, что выбор гиперпараметров заметно влияет на качество SVM модели 3) В выводе сказано, что выбор гиперпараметров слабо влияет на качество линейной модели.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Выполнено 0/3 1) Обучена модель со скором на кросс-валидации &gt; 0.9 2) В выводе сказано, что выбор гиперпараметров заметно влияет на качество SVM модели 3) В выводе сказано, что выбор гиперпараметров слабо влияет на качество линейной модели.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>5. Ограничения SVM</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            3.0
+                            балла<br>
+                            Выполнено 3/3 1) Проведены эксперименты с замером времени работы SVM и линейной модели, графики монотонные, без ступенек 2) Удалось показать ухудшение работы SVM по сравнению с линейной моделью в зависимости от числа признаков. 3) Удалось показать ухудшение работы SVM по сравнению с линейной моделью и в зависимости от числа объектов. В выводе сказно, что это объясняется квадратичной сложностью SVM от числа объектов (в отличии от линейной сложности для логистической регрессии)<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            2.0
+                            балла<br>
+                            Выполнено 2/3 1) Проведены эксперименты с замером времени работы SVM и линейной модели, графики монотонные, без ступенек 2) Удалось показать ухудшение работы SVM по сравнению с линейной моделью в зависимости от числа признаков. 3) Удалось показать ухудшение работы SVM по сравнению с линейной моделью и в зависимости от числа объектов. В выводе сказно, что это объясняется квадратичной сложностью SVM от числа объектов (в отличии от линейной сложности для логистической регрессии)<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            1.0
+                            балл<br>
+                            Выполнено 1/3 1) Проведены эксперименты с замером времени работы SVM и линейной модели, графики монотонные, без ступенек 2) Удалось показать ухудшение работы SVM по сравнению с линейной моделью в зависимости от числа признаков. 3) Удалось показать ухудшение работы SVM по сравнению с линейной моделью и в зависимости от числа объектов. В выводе сказно, что это объясняется квадратичной сложностью SVM от числа объектов (в отличии от линейной сложности для логистической регрессии)<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Выполнено 0/3 1) Проведены эксперименты с замером времени работы SVM и линейной модели, графики монотонные, без ступенек 2) Удалось показать ухудшение работы SVM по сравнению с линейной моделью в зависимости от числа признаков. 3) Удалось показать ухудшение работы SVM по сравнению с линейной моделью и в зависимости от числа объектов. В выводе сказно, что это объясняется квадратичной сложностью SVM от числа объектов (в отличии от линейной сложности для логистической регрессии)<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>6. Уменьшение размерности входа</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            4.0
+                            балла<br>
+                            Выполнено 4/4 1) Проведены эксперименты с замером качества на тестовой выборке при разном числе признаков после PCA 2) Проведены эксперименты с замером времени работы при разном числе признаков после PCA 3) Удалось показать падение качества решения при уменьшении размерности входа. В выводе сказно про потерю информации при уменьшении размерности, и, как следствие, падение качества. 4) Удалось продемонстрировать ускорение при уменьшении размерности входа (и при этом, возможно, падение качества). В выводе отмечено, что наблюдается ускорение при уменьшении размерности<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            3.0
+                            балла<br>
+                            Выполнено 3/4 1) Проведены эксперименты с замером качества на тестовой выборке при разном числе признаков после PCA 2) Проведены эксперименты с замером времени работы при разном числе признаков после PCA 3) Удалось показать падение качества решения при уменьшении размерности входа. В выводе сказно про потерю информации при уменьшении размерности, и, как следствие, падение качества. 4) Удалось продемонстрировать ускорение при уменьшении размерности входа (и при этом, возможно, падение качества). В выводе отмечено, что наблюдается ускорение при уменьшении размерности<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            2.0
+                            балла<br>
+                            Выполнено 2/4 1) Проведены эксперименты с замером качества на тестовой выборке при разном числе признаков после PCA 2) Проведены эксперименты с замером времени работы при разном числе признаков после PCA 3) Удалось показать падение качества решения при уменьшении размерности входа. В выводе сказно про потерю информации при уменьшении размерности, и, как следствие, падение качества. 4) Удалось продемонстрировать ускорение при уменьшении размерности входа (и при этом, возможно, падение качества). В выводе отмечено, что наблюдается ускорение при уменьшении размерности<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            1.0
+                            балл<br>
+                            Выполнено 1/4 1) Проведены эксперименты с замером качества на тестовой выборке при разном числе признаков после PCA 2) Проведены эксперименты с замером времени работы при разном числе признаков после PCA 3) Удалось показать падение качества решения при уменьшении размерности входа. В выводе сказно про потерю информации при уменьшении размерности, и, как следствие, падение качества. 4) Удалось продемонстрировать ускорение при уменьшении размерности входа (и при этом, возможно, падение качества). В выводе отмечено, что наблюдается ускорение при уменьшении размерности<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Выполнено 0/4 1) Проведены эксперименты с замером качества на тестовой выборке при разном числе признаков после PCA 2) Проведены эксперименты с замером времени работы при разном числе признаков после PCA 3) Удалось показать падение качества решения при уменьшении размерности входа. В выводе сказно про потерю информации при уменьшении размерности, и, как следствие, падение качества. 4) Удалось продемонстрировать ускорение при уменьшении размерности входа (и при этом, возможно, падение качества). В выводе отмечено, что наблюдается ускорение при уменьшении размерности<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>7. Калибровка вероятностей</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            3.0
+                            балла<br>
+                            Выполнено 3/3 1) Реализованы функции в CalibratingLogisticRegression 2) В выводе приведён пример задачи, где могла бы потребоваться калибровка вероятностей 3) После калибровки, вероятности легли на прямую [0, 0]-[1, 1] и кривая состоит не из 2-3 точек.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            2.0
+                            балла<br>
+                            Выполнено 2/3 1) Реализованы функции в CalibratingLogisticRegression 2) В выводе приведён пример задачи, где могла бы потребоваться калибровка вероятностей 3) После калибровки, вероятности легли на прямую [0, 0]-[1, 1] и кривая состоит не из 2-3 точек.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            1.0
+                            балл<br>
+                            Выполнено 1/3 1) Реализованы функции в CalibratingLogisticRegression 2) В выводе приведён пример задачи, где могла бы потребоваться калибровка вероятностей 3) После калибровки, вероятности легли на прямую [0, 0]-[1, 1] и кривая состоит не из 2-3 точек.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Выполнено 0/3 1) Реализованы функции в CalibratingLogisticRegression 2) В выводе приведён пример задачи, где могла бы потребоваться калибровка вероятностей 3) После калибровки, вероятности легли на прямую [0, 0]-[1, 1] и кривая состоит не из 2-3 точек.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Оцените, насколько понятным для вас был код автора </b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Все понятно<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            В целом понятно, были неясные места<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Есть, куда расти<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Оцените, насколько понятным для вас было оформление ноутбука автора в целом</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Все понятно<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            В целом понятно, были неясные места<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Есть, куда расти<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Бонусное задание</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            2.0
+                            балла<br>
+                            Мем есть :)<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Мема нет<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+
+        <h4>Комментарии</h4>
+
+        <div class="list-group">
+                <a href="#" class="rater_0 list-group-item">
+                    <h4 class="list-group-item-heading">
+                            Рецензия №1
+                    </h4>
+                    <p class="list-group-item-text"></p>
+                </a>
+                <a href="#" class="rater_1 list-group-item">
+                    <h4 class="list-group-item-heading">
+                            Рецензия №2
+                    </h4>
+                    <p class="list-group-item-text"><p>с наступающим! :)</p></p>
+                </a>
+                <a href="#" class="rater_2 list-group-item">
+                    <h4 class="list-group-item-heading">
+                            Рецензия №3
+                    </h4>
+                    <p class="list-group-item-text"></p>
+                </a>
+        </div>
+</div>
+
+
+<script type='text/javascript'>
+$('input[type=file]').bootstrapFileInput();
+</script>
+
+<script type='text/javascript'>
+    $('.list-group-item').on('click', function() {
+        $this = $(this);
+
+        var need_update = true;
+        if ($this.hasClass('active')) {
+            need_update = false;
+        }
+
+        $('.btn-primary').removeClass('btn-primary');
+        $('.active').removeClass('active');
+
+        if (need_update) {
+            var elements = document.getElementsByClassName($this.attr('class').split(' ')[0]);
+            for(var i = 0; i < elements.length; i++) {
+                if (elements[i].classList.contains('btn')) {
+                    elements[i].classList.add('btn-primary');
+                } else {
+                    elements[i].classList.add('active');
+                }
+            }
+        }
+    });
+
+    $('.btn').on('click', function() {
+        $this = $(this);
+
+        var need_update = true;
+        if ($this.hasClass('btn-primary')) {
+            need_update = false;
+        }
+
+        $('.btn-primary').removeClass('btn-primary');
+        $('.active').removeClass('active');
+
+        if (need_update) {
+            var elements = document.getElementsByClassName($this.attr('class').split(' ')[0]);
+            for(var i = 0; i < elements.length; i++) {
+                if (elements[i].classList.contains('btn')) {
+                    elements[i].classList.add('btn-primary');
+                } else {
+                    elements[i].classList.add('active');
+                }
+            }
+        }
+    });
+</script>
+
+    </div>
+</div>
+    <script type='text/javascript'>
+    $(function () {
+        $('.timepicker').each(function(){
+            $(this).datetimepicker({format: 'DD.MM.YYYY HH:mm'});
+        });
+    });
+    </script>
+</body>
+</html>

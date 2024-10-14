@@ -1,0 +1,1295 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/static/css/bootstrap-select.min.css">
+    <script src="/static/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+
+    <link rel="stylesheet" href="/static/css/bootstrap-datetimepicker.min.css">
+    <script src="/static/js/moment-with-locales.min.js"></script>
+    <script src="/static/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="/static/js/bootstrap.file-input.js"></script>
+    <script src='/static/js/tablesorter.min.js'></script>
+
+    <link rel="stylesheet" href="/static/css/navbar_style.css">
+
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$']]
+      }
+    };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+        $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            // open or close navbar
+            $('#sidebar').toggleClass('active');
+            $('#content').toggleClass('pos');
+            // close dropdowns
+            $('.collapse.in').toggleClass('in');
+            // and also adjust aria-expanded attributes we use for the open/closed arrows
+            // in our CSS
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+    </script>
+
+
+    <style type='text/css'>
+        .content {
+            max-width: 800px;
+            padding-top: 9px;
+            padding-left: 15px;
+        }
+        .wide-content {
+            width: 1000px;
+            padding-top: 9px;
+            padding-left: 15px;
+        }
+        .fullwide-content {
+            width: 100%;
+            padding-top: 9px;
+            padding-left: 15px;
+        }
+    ol {
+        padding-left: 15px;
+    }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+<nav id="sidebar" style="overflow:auto">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+        <h4 style="text-align: center">Григорий</h4>
+    </div>
+
+     <!-- Sidebar Links -->
+    <ul class="list-unstyled components">
+        <!-- Link with dropdown items -->
+<li>
+<a class="const-grey" class="const-grey" href="#left_drop_down" data-toggle="collapse" aria-expanded="false">
+        Машинное обучение 2023-2024
+</a>
+<ul class="collapse list-unstyled" id="left_drop_down">
+            <li><a class="const-grey" href="/course/13/info">Глубокое обучение 2024-2025</a></li>
+
+        <li class="separator"></li>
+
+
+
+
+        <li><a class="const-grey" href="/add_user_to_course">Присоединиться к курсу</a></li>
+
+
+
+
+
+
+</ul>
+</li><li>
+    <a class="const-grey" href='/course/7/info'>
+        Материалы
+    </a>
+</li>
+<li class="separator"></li>
+<li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/1'>
+                1. [Base] Введение в Python.1-5
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/2'>
+                2. [Base] Введение в Python.6
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/3'>
+                3. [Base] Введение в Python.7
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/4'>
+                4. numpy-pandas-matplotlib (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/5'>
+                5. numpy-pandas-matplotlib (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/6'>
+                6. KNN (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/7'>
+                7. KNN (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/8'>
+                8. Тест №1 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/9'>
+                9. Тест №1 (2й поток)
+            </a>
+        </li>
+        <li class='active'>
+            <a class="const-grey"  href='/course/7/task/10'>
+                10. Тест №1 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/11'>
+                11. Linear models: regression (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/12'>
+                12. Linear models: classification (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/13'>
+                13. Linear models (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/14'>
+                14. Основы SVM (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/15'>
+                15. Основы SVM (ML)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/16'>
+                16. Тест №2 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/17'>
+                17. Тест №2 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/18'>
+                18. Тест №3 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/19'>
+                19. Тест №3 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/20'>
+                20. Тест №4 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/21'>
+                21. Тест №4 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/22'>
+                22. Тест №4 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/23'>
+                23. Зачетный тест (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/24'>
+                24. Зачетный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/25'>
+                25. Зачетный тест (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/26'>
+                26. Зачетный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/27'>
+                27. Зачетный тест (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/28'>
+                28. Зачетный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/29'>
+                29. Зачетный тест (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/30'>
+                30. Деревья решений (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/31'>
+                31. Деревья решений (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/32'>
+                32. Деревья решений (ML)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/33'>
+                33. Град. бустинг (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/34'>
+                34. Град. бустинг (ML)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/35'>
+                35. Тест №6 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/36'>
+                36. Тест №6 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/37'>
+                37. Тест №6 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/38'>
+                38. Кластеризация (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/39'>
+                39. Кластеризация (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/40'>
+                40. Контест (Spotify recommendations)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/41'>
+                41. Тест №7 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/42'>
+                42. Тест №7 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/43'>
+                43. Тест №7 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/44'>
+                44. Частичное Обучение (notebook) [2023-2024]
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/45'>
+                45. Частичное Обучение (unit-tests) [2023-2024]
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/46'>
+                46. Тест №8 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/47'>
+                47. Тест №8 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/48'>
+                48. Тест №8 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/49'>
+                49. Экзаменационный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/50'>
+                50. Экзаменационный тест (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/51'>
+                51. Экзаменационный тест (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/52'>
+                52. Экзаменационный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/53'>
+                53. Экзаменационный тест (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/54'>
+                54. Экзаменационный тест (3й поток)
+            </a>
+        </li>
+</li>
+<li class="separator"></li>        <li>
+            <a class="const-grey" href='/course/7/standings'>
+                Таблица результатов
+            </a>
+        </li>
+<li>
+    <a class="const-grey" href='/logout'>Выйти</a>
+</li>    </ul>
+</nav>
+<div id="content">
+        <button type="button" id="sidebarCollapse" class="btn navbar-btn"
+                style="outline: none;
+                margin-left: -35px;
+                background-color: #337ab7;
+                color: #ffffff;
+                padding: 7px;
+                position: fixed;
+">
+            <span class="glyphicon glyphicon-align-left" style=""></span>
+        </button>         <!-- Page Content -->
+<div class='content'>
+        <h2>Общее</h2>
+<ul>
+<li>
+<p><strong><font color='red'>ТЕСТ МОЖНО СДАТЬ ТОЛЬКО 1 РАЗ, НАЖАВ НА КНОПКУ "Сохранить решение"</font></strong></p>
+</li>
+<li>
+<p><strong><font color='red'>Решайте тест того потока, лектора которого вы слушаете. Скорее всего, ваш выбор будет совпадать с вашим текущим потоком обучения, однако если вы преимущественно ходите/слушаете в записи другого лектора, то выбирайте соответствующий ему поток </font></strong></p>
+</li>
+<li>
+<p><strong><font color='red'>В дальнейшем вам автоматически будет засчитываться только тот поток, который вы выбрали при решении Теста №1 (или первого из решенных вами тестов по времени). Решать тесты других потоков не будет иметь смысла </font></strong></p>
+</li>
+<li>
+<p><strong><font color='red'>Поменять поток можно будет только при индивидуальном обращении к Ане @liebeann с причиной, почему хотите поменять поток </font></strong></p>
+</li>
+</ul>
+<h2>Как решать тест</h2>
+<ul>
+<li>В вопросе может быть <strong>несколько</strong> вариантов правильного ответа (то есть от 1 до кол-ва ответов в вопросе). </li>
+<li>Вопрос засчитывается, если выбраны ВСЕ правильные варианты и НЕ ВЫБРАНЫ ВСЕ неправильные варианты.</li>
+<li>В данном тесте все числовые вводимые ответы только целочисленные</li>
+</ul>
+<h2>Комментарии по наполнению</h2>
+<ul>
+<li>При подсчете разбиений на тестовую и обучающую выборки порядок объектов не важен.</li>
+<li>Метод ближайших центроидов осуществляет классификацию, в которой усреднением по объектам класса вычисляется центроид каждого класса, а для нового объекта назначается тот класс, центроид которого ближе. </li>
+<li>В метрических методах используется Евклидова ф-ция расстояния, если не оговорено иначе.</li>
+<li>Обозначим $N$ - число объектов обучающей выборки, $D$-число признаков, $C$-число классов.</li>
+<li>Под “простотой” и “сложностью” моделей понимается не сложность алгоритма или вычислений, а ее негибкость и гибкость соответственно, т.е. способность адаптироваться к данным обучающей выборки. Если речь идет о сложности вычислений, то это называется “вычислительной простотой” и “вычислительной сложностью”.</li>
+<li>Критерий качества - функция, максимизируя которую выбирается наилучшая модель.
+Функция потерь - функция, минимизируя которую выбирается наилучшая модель.</li>
+<li>Отличие функции близости и функции расстояния на примере метода $K$ ближайших соседей: ближайшие соседи сортируются по возрастанию ф-ции расстояния либо сортируются по убыванию ф-ции близости.</li>
+<li>$x^{(i)}, z^{(i)}$ -- $i$-й признак объекта $x$($z$).</li>
+</ul>
+    <p>
+    В тестовых заданиях первая галочка — правильный ответ, вторая галочка —
+    выбранный ответ. Цвет обозначает, правильно ли в данном
+    пункте поставлена галочка. Если все пункты верные (галочки
+    совпадают / все пункты зеленые), то за задание ставится
+    полный балл, в противном случае ставится 0 баллов.
+    </p>
+    <ol>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Дана выборка из 2021 объекта. Сколько раз придется применить метод обучения, чтобы вычислить оценку скользящего контроля leave-one-out (кросс-валидации с числом блоков равным числу объектов)?</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <b>Ответ:</b> 2021<br>
+                    <b>Правильный ответ:</b> 2021.0<br>
+                    <b>Погрешность:</b> 0.0 <br>
+                    <b>Балл:</b>
+                        1.0
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Что можно сказать о компромиссе дисперсии-смещения для методов KNN?</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    Чем меньше K тем больше смещение
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                     Чем меньше K тем больше дисперсия
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                     Чем меньше K тем меньше дисперсия
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    Чем меньше K тем меньше смещение
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        1.0
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Взвешенное обобщение метода K ближайших соседей позволяет:</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    учитывать голос каждого объекта в голосовании с определенным весом
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-error'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    учитывать расстояние до каждого объекта с определенным весом
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        0
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Выбор параметров для методов машинного обучения достигается минимизацией</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    теоретического риска
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    эмпирического риска
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        1.0
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Прогнозы методом K ближайших соседей (Евклидова ф-ция близости):</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    не зависят от масштабирования признаков
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    зависят от масштабирования признаков
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        1.0
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Какие преобразования пространства признаков позволяют уменьшить влияние выбросов для метрических методов в случае числовых признаков:</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    Элементарные преобразования признака, увеличивающие симметричность его распределения 
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    Бинаризация – разбиение шкалы признака на равные интервалы
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-error'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    Квантилизация – разбиение шкалы признака на интервалы разной длины, но с одинаковым числом наблюдений в каждом интервале
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-error'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    Min-Max преобразование – линейное отображение признака на отрезок [0,1]
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    «Стандартизация» признаков - вычитание выборочного среднего по каждой координате и деление на оценку стандартного отклонения
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-error'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    «Центрирование» признаков – вычитание выборочного среднего по каждой координате
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        0
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Перечислите, какие из приведенных задач являются задачами обучения с учителем:</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    обнаружение нетипичных объектов (выбросов)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    снижение размерности
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    регрессия
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    классификация
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    кластеризация
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        1.0
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Какая современная IT-технология позволила существенно улучшить качество и расширить область применения Интеллектуальных систем, использующих методы машинного обучения?</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    Большие данные
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    Квантовые вычисления
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                     Блокчейн
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    Все вышеперечисленное
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    Интернет вещей
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        1.0
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Что можно сказать о связи терминов машинное обучение (МО) и искусственный интеллект (ИИ)?</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                     Методы ИИ и МО не пересекаются
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-error'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    МО включает все методы ИИ
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-error'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    ИИ включает все методы МО
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                     Методы ИИ и МО пересекаются
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        0
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Какие метапараметры в методе окна Парзена для задачи классификации могут использоваться для контроля сложности модели:</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-error'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    И число соседей K и ширина ядра h одновременно
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    Ни число соседей K, ни ширина ядра h
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-error'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    Число соседей K
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-error'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    Ширина ядра h
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        0
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+    </ol>
+</div>
+
+
+<script type='text/javascript'>
+$('input[type=file]').bootstrapFileInput();
+</script>
+    </div>
+</div>
+    <script type='text/javascript'>
+    $(function () {
+        $('.timepicker').each(function(){
+            $(this).datetimepicker({format: 'DD.MM.YYYY HH:mm'});
+        });
+    });
+    </script>
+</body>
+</html>

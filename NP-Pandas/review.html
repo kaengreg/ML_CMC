@@ -1,0 +1,1732 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/static/css/bootstrap-select.min.css">
+    <script src="/static/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+
+    <link rel="stylesheet" href="/static/css/bootstrap-datetimepicker.min.css">
+    <script src="/static/js/moment-with-locales.min.js"></script>
+    <script src="/static/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="/static/js/bootstrap.file-input.js"></script>
+    <script src='/static/js/tablesorter.min.js'></script>
+
+    <link rel="stylesheet" href="/static/css/navbar_style.css">
+
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$']]
+      }
+    };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+        $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            // open or close navbar
+            $('#sidebar').toggleClass('active');
+            $('#content').toggleClass('pos');
+            // close dropdowns
+            $('.collapse.in').toggleClass('in');
+            // and also adjust aria-expanded attributes we use for the open/closed arrows
+            // in our CSS
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+    </script>
+
+
+    <style type='text/css'>
+        .content {
+            max-width: 800px;
+            padding-top: 9px;
+            padding-left: 15px;
+        }
+        .wide-content {
+            width: 1000px;
+            padding-top: 9px;
+            padding-left: 15px;
+        }
+        .fullwide-content {
+            width: 100%;
+            padding-top: 9px;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+<nav id="sidebar" style="overflow:auto">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+        <h4 style="text-align: center">Григорий</h4>
+    </div>
+
+     <!-- Sidebar Links -->
+    <ul class="list-unstyled components">
+        <!-- Link with dropdown items -->
+<li>
+<a class="const-grey" class="const-grey" href="#left_drop_down" data-toggle="collapse" aria-expanded="false">
+        Машинное обучение 2023-2024
+</a>
+<ul class="collapse list-unstyled" id="left_drop_down">
+            <li><a class="const-grey" href="/course/13/info">Глубокое обучение 2024-2025</a></li>
+
+        <li class="separator"></li>
+
+
+
+
+        <li><a class="const-grey" href="/add_user_to_course">Присоединиться к курсу</a></li>
+
+
+
+
+
+
+</ul>
+</li><li>
+    <a class="const-grey" href='/course/7/info'>
+        Материалы
+    </a>
+</li>
+<li class="separator"></li>
+<li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/1'>
+                1. [Base] Введение в Python.1-5
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/2'>
+                2. [Base] Введение в Python.6
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/3'>
+                3. [Base] Введение в Python.7
+            </a>
+        </li>
+        <li class='active'>
+            <a class="const-grey"  href='/course/7/task/4'>
+                4. numpy-pandas-matplotlib (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/5'>
+                5. numpy-pandas-matplotlib (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/6'>
+                6. KNN (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/7'>
+                7. KNN (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/8'>
+                8. Тест №1 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/9'>
+                9. Тест №1 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/10'>
+                10. Тест №1 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/11'>
+                11. Linear models: regression (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/12'>
+                12. Linear models: classification (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/13'>
+                13. Linear models (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/14'>
+                14. Основы SVM (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/15'>
+                15. Основы SVM (ML)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/16'>
+                16. Тест №2 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/17'>
+                17. Тест №2 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/18'>
+                18. Тест №3 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/19'>
+                19. Тест №3 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/20'>
+                20. Тест №4 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/21'>
+                21. Тест №4 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/22'>
+                22. Тест №4 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/23'>
+                23. Зачетный тест (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/24'>
+                24. Зачетный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/25'>
+                25. Зачетный тест (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/26'>
+                26. Зачетный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/27'>
+                27. Зачетный тест (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/28'>
+                28. Зачетный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/29'>
+                29. Зачетный тест (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/30'>
+                30. Деревья решений (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/31'>
+                31. Деревья решений (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/32'>
+                32. Деревья решений (ML)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/33'>
+                33. Град. бустинг (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/34'>
+                34. Град. бустинг (ML)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/35'>
+                35. Тест №6 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/36'>
+                36. Тест №6 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/37'>
+                37. Тест №6 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/38'>
+                38. Кластеризация (notebook)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/39'>
+                39. Кластеризация (unit-tests)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/40'>
+                40. Контест (Spotify recommendations)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/41'>
+                41. Тест №7 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/42'>
+                42. Тест №7 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/43'>
+                43. Тест №7 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/44'>
+                44. Частичное Обучение (notebook) [2023-2024]
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/45'>
+                45. Частичное Обучение (unit-tests) [2023-2024]
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/46'>
+                46. Тест №8 (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/47'>
+                47. Тест №8 (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/48'>
+                48. Тест №8 (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/49'>
+                49. Экзаменационный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/50'>
+                50. Экзаменационный тест (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/51'>
+                51. Экзаменационный тест (3й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/52'>
+                52. Экзаменационный тест (1й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/53'>
+                53. Экзаменационный тест (2й поток)
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/7/task/54'>
+                54. Экзаменационный тест (3й поток)
+            </a>
+        </li>
+</li>
+<li class="separator"></li>        <li>
+            <a class="const-grey" href='/course/7/standings'>
+                Таблица результатов
+            </a>
+        </li>
+<li>
+    <a class="const-grey" href='/logout'>Выйти</a>
+</li>    </ul>
+</nav>
+<div id="content">
+        <button type="button" id="sidebarCollapse" class="btn navbar-btn"
+                style="outline: none;
+                margin-left: -35px;
+                background-color: #337ab7;
+                color: #ffffff;
+                padding: 7px;
+                position: fixed;
+">
+            <span class="glyphicon glyphicon-align-left" style=""></span>
+        </button>         <!-- Page Content -->
+<div class='content'>
+    <h4>Инструкция по рецензированию</h4>
+        <p>
+        <p>Часть 1. Работа с табличными данными.</p>
+<ul>
+<li>Во всех заданиях обязательно наличие кода решения. Письменные ответы на вопросы без сопутствующего кода оцениваются в 0 баллов.</li>
+</ul>
+<p>Часть 2. Визуализация / Часть 3. Векторные вычисления</p>
+<p>Все графики должны быть опрятные:</p>
+<ul>
+<li>
+<p>Должно быть название (plt.title) графика; </p>
+</li>
+<li>
+<p>На графиках должны быть подписаны оси (plt.xlabel, plt.ylabel);</p>
+</li>
+<li>
+<p>Должны быть подписаны единицы измерения (если это возможно); </p>
+</li>
+<li>
+<p>Все названия должны быть понятны любому человеку, знакомому с терминологией, без заглядывания в код; </p>
+</li>
+<li>
+<p>Подписи тиков на осях не должны сливаться как на одной оси, так и между ними; </p>
+</li>
+<li>
+<p>Если изображено несколько сущностей на одном холсте (например несколько функций), то необходима поясняющая легенда (plt.legend); </p>
+</li>
+<li>
+<p>Все линии на графиках должны быть чётко видны (нет похожих цветов или цветов, сливающихся с фоном); </p>
+</li>
+<li>
+<p>Если отображена величина, имеющая очевидный диапазон значений (например, проценты могут быть от 0 до 100), то желательно масштабировать ось на весь диапазон значений (исключением является случай, когда вам необходимо показать малое отличие, которое незаметно в таких масштабах);</p>
+</li>
+<li>
+<p>Графики должны быть не супер-микро и не супер-макро по размерам, так, чтобы можно было увидеть все, что нужно.</p>
+</li>
+</ul>
+<p>При нарушении хотя бы 3 пунктов график считается НЕ опрятным, что ведет к снижению баллов по соответствующему критерию.</p>
+        </p>
+
+        <h4>Файлы решения</h4>
+                <a href='/solution_file/29103/numpy-pandas-matplotlib.ipynb'>
+                    numpy-pandas-matplotlib.ipynb
+                </a>
+        <br><br>
+
+        <h4>Рецензии</h4>
+
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 1. Откройте файл с таблицей и выведите последние 5 строк</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.4
+                            баллов<br>
+                             Выведены строки с индексами 3216-3220. <br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 1. Посмотрите на данные и скажите, что они из себя представляют, сколько в таблице строк и столбцов?</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.4
+                            баллов<br>
+                             Дан ответ, что данные представляют из себя таблицу с 3221 строкой и 15 столбцами.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 2. Для скольких стран есть информация о видеороликах в таблице? (колонка country)</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.4
+                            баллов<br>
+                            Показано, что в таблице есть видеоролики для 19 уникальных стран.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 2. Сколько есть видеороликов c разрешенными и запрещенными комментариями? (колонка comments_disabled). Под видеороликом считаем 1 запись в таблице.</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.4
+                            баллов<br>
+                            Показано, что в таблице 3193 записей с разрешенными комментариями (comments_disabled = False) и 28 записей с запрещенными комментариями (comments_disabled = True).       <br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 2. Какое максимальное число просмотров у видеороликов, попавших в таблицу? (колонка view_count)</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.4
+                            баллов<br>
+                            Показано, что максимальное число просмотров 123034293.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 3. Есть ли в данных пропуски? В каких колонках? </b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.4
+                            баллов<br>
+                            Показано, что в таблице есть пропуски в колонках country и description. <br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 3. Заполните пропуски пустой строкой для текстовых колонок, и удалите строки с пропусками для колонок с категориальными значениями.</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.6
+                            баллов<br>
+                            В колонке description пропуски заполнены пустой строкой, а строки с пропущенными значениями в колонке country удалены.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 4. Какого она типа?</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.2
+                            баллов<br>
+                            Показано, что колонка publishedAt имеет тип object. <br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 4. Измените тип колонки на datetime. Покажите, что после изменения колонка действительно имеет тип datetime.</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.4
+                            баллов<br>
+                            Изменен тип колонки publishedAt на datetime. <br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 4. В какой месяц было добавлено больше всего видеороликов?</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.6
+                            баллов<br>
+                            Показано, что больше всего видеороликов было опубликовано в июле.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 5. Переведите строки в нижний регистр и обрежьте ненужные пробелы справа и слева.</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.4
+                            баллов<br>
+                            Значения в колонке description переведены в нижний регистр, пробельные символы справа и слева удалены.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 5. Замените url-адреса в описаниях на специальный тэг &lt;URL&gt;. </b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.6
+                            баллов<br>
+                            Все url-адреса в колонке description заменены на &lt;URL&gt;.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 5. Выведите полностью description для видеоролика с video_id = &#39;Oxexirlmdig&#39;. </b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.4
+                            баллов<br>
+                            Показано, что значение description для видео с video_id &#39;Oxexirlmdig&#39; равно: &#39;music line &amp; lyrics : ghetto geasy &amp; majkmusic produced : bigdeal records mix &amp; master: bigdeal recordsavailable on:spotify: &lt;URL&gt; &lt;URL&gt; &lt;URL&gt;.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 6. Какие 5 роликов набрали в Италии (country=&#39;IT&#39;) наибольшее число просмотров (колонка view_count)? .....</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.4
+                            баллов<br>
+                            Выполнена сортировка по числу просмотров (колонка view_count), в ответе присутствуют следующие 5 каналов: That Little Puff, SMTOWN, Celine &amp; Michiel, SportsNation, BeatboxJCOP, но не в верном порядке.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.8
+                            баллов<br>
+                            Выполнена сортировка по числу просмотров (колонка view_count), в ответе приведены следующие 5 каналов в таком порядке: That Little Puff, SMTOWN, Celine &amp; Michiel, SportsNation, BeatboxJCOP.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 7. Какой видеоролик был опубликован в наибольшем кол-ве стран? В качестве ответа привeдите название видеоролика (колонка title).</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.8
+                            баллов<br>
+                            Показано, что ролик с названием &#34;Race Highlights | 2022 British Grand Prix&#34; был опубликован в наибольшем числе стран.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 8. Какое максимальное число просмотров (колонка view_count) у видеороликов, выпущенных во Франции или Италии (в колонке country значениe FR или IT) в июле (колонка publishedAt)? </b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.4
+                            баллов<br>
+                            Показано, что максимальное число просмотров у видеороликов, выпущенных во Франции или Италии в июле, равно 82864422. Решение не в 1 строку. <br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.8
+                            баллов<br>
+                            Показано, что максимальное число просмотров у видеороликов, выпущенных во Франции или Италии в июле, равно 82864422. Решение в 1 строку. <br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 9. Посмотрите на названия каналов из 17 категории (колонка categoryId). Как вы думаете, что это за категория?</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.2
+                            баллов<br>
+                            Дан ответ, что это категория связана со спортом (ответ аргументирован, например, выводом всех уникальных названий каналов из 17 категории).<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 9. Предположим, что была допущена ошибка, и все видеоролики из 17 категории, относятся к 16 категории. Исправьте нужные значения в колонке categoryId, после чего выведите все уникальные категории.</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.8
+                            баллов<br>
+                            В строках, где значения &#39;categoryId&#39; были равны 17, значения изменены на 16. После преобразований выведены все категории, среди которых нет значения 17, но есть 16.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 10. Замените строки со значением &#39;[none]&#39; на пустую строку.</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.4
+                            баллов<br>
+                            В строках, где значения &#39;tags&#39; были равны &#39;[none]&#39;, значения заменены на пустую строку.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 1. Задание 10. Какой самый популярный тэг? Обратите внимание, что у каждого видеоролика может быть более 1 тэга.</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Пункт не выполнен  / выполнен неправильно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.8
+                            баллов<br>
+                            Дан ответ отличный от &#39;challenge&#39;, но ход решения, в целом, правильный. Значения в колонках tags были разбиты на уникальные значения (с помощью split по &#39;|&#39; и explode), но подсчёт выполняется по уникальным значениям колонки tags без предобработки (значения не приведены в нижний регистр, не удалены пробелы).<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            1.6
+                            балла<br>
+                            Дан ответ &#39;challenge&#39;.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 2. Задание 1. </b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            График не построен / неопрятный (не выполнены хотя бы 3 пункта из правил оформления).<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.5
+                            баллов<br>
+                            Построен опрятный график.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 2. Задание 1.</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            График не построен / некорректный.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            2.5
+                            балла<br>
+                            Построен график типа line plot. График корректный: по оси x - дата публикации (publishedA), по оси y - кол-во роликов, выпущенных в соответствующую дату. Выполнена группировка по video_id. При корректном построении пик приходится на начало июля. <br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 2. Задание 2.</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            График не построен / неопрятный (не выполнены хотя бы 3 пункта из правил оформления).<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.5
+                            баллов<br>
+                            Построен опрятный график.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 2. Задание 2.</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            График не построен / некорректный.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            2.5
+                            балла<br>
+                            Построен график типа bar plot.  График корректный: по одной оси - 19 стран (country) (ИЛИ 20 с учетом None), по другой - кол-во опубликованных роликов. При корректном построении в стране ME наименьшее число опубликованных роликов.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 2. Задание 3.</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            График не построен / неопрятный (не выполнены хотя бы 3 пункта из правил оформления).<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.5
+                            баллов<br>
+                            Построен опрятный график.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 2. Задание 3.</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            График не построен / некорректный.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            2.5
+                            балла<br>
+                            Построен график типа scatter plot. График корректный: по одной оси - кол-во просмотров (view_count), по другой - кол-во комментариев (comments_count). Возможна логарифмическая шкала. Для данных есть фильтры country == &#39;FR&#39; и comments_disabled == False.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 3. Задача 7.</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Графики не построены / неопрятные (не выполнены хотя бы 3 пункта из правил оформления хотя бы для одного графика). <br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.5
+                            баллов<br>
+                            Построены опрятные графики.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 3. Задача 7.</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Графики не построены / некорректные.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            1.0
+                            балл<br>
+                             Построены корректные графики сравнения для 1-3 функций: по оси x - размерность входных данных, по оси y - время работы функции, векторизованная и невекторизованная реализации сравниваются на одном графике, для них есть легенда.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            3.0
+                            балла<br>
+                             Построены корректные графики сравнения для 4-5 функций: по оси x - размерность входных данных, по оси y - время работы функции, векторизованная и невекторизованная реализации сравниваются на одном графике, для них есть легенда.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            5.5
+                            баллов<br>
+                             Построены корректные графики сравнения для всех 6 функций: по оси x - размерность входных данных, по оси y - время работы функции, векторизованная и невекторизованная реализации сравниваются на одном графике, для них есть легенда.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Часть 3. Задача 7.</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Нет выводов.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            1.0
+                            балл<br>
+                            Есть выводы о том, что время работы векторизованных функций меньше, разница в скорости увеличивается с увеличением размерности входных данных. <br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Оцените, насколько понятным для вас был код автора</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Все понятно.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            В целом понятно, были неясные места.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Есть, куда расти.<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Оцените, насколько понятным для вас было оформление ноутбука автора в целом</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Все понятно<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            В целом понятно, были неясные места<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Есть, куда расти<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+            <table class="table">
+                <tr><td><b>Бонусное задание</b></td></tr>
+                    <tr>
+                        <td class="col-md-2">
+                            2.0
+                            балла<br>
+                            Есть картинка :)<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                        <a href="#" class="rater_0 btn btn-default">
+                                                Рецензия №1
+                                        </a>
+                                        <a href="#" class="rater_1 btn btn-default">
+                                                Рецензия №2
+                                        </a>
+                                        <a href="#" class="rater_2 btn btn-default">
+                                                Рецензия №3
+                                        </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">
+                            0.0
+                            баллов<br>
+                            Нет картинки<br>
+                        </td>
+                        <td class="col-md-4">
+                            <div class="btn-group">
+                                    ---
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+
+        <h4>Комментарии</h4>
+
+        <div class="list-group">
+                <a href="#" class="rater_0 list-group-item">
+                    <h4 class="list-group-item-heading">
+                            Рецензия №1
+                    </h4>
+                    <p class="list-group-item-text"><p>Не учтено незначащее значение Nan</p></p>
+                </a>
+                <a href="#" class="rater_1 list-group-item">
+                    <h4 class="list-group-item-heading">
+                            Рецензия №2
+                    </h4>
+                    <p class="list-group-item-text"></p>
+                </a>
+                <a href="#" class="rater_2 list-group-item">
+                    <h4 class="list-group-item-heading">
+                            Рецензия №3
+                    </h4>
+                    <p class="list-group-item-text"></p>
+                </a>
+        </div>
+</div>
+
+
+<script type='text/javascript'>
+$('input[type=file]').bootstrapFileInput();
+</script>
+
+<script type='text/javascript'>
+    $('.list-group-item').on('click', function() {
+        $this = $(this);
+
+        var need_update = true;
+        if ($this.hasClass('active')) {
+            need_update = false;
+        }
+
+        $('.btn-primary').removeClass('btn-primary');
+        $('.active').removeClass('active');
+
+        if (need_update) {
+            var elements = document.getElementsByClassName($this.attr('class').split(' ')[0]);
+            for(var i = 0; i < elements.length; i++) {
+                if (elements[i].classList.contains('btn')) {
+                    elements[i].classList.add('btn-primary');
+                } else {
+                    elements[i].classList.add('active');
+                }
+            }
+        }
+    });
+
+    $('.btn').on('click', function() {
+        $this = $(this);
+
+        var need_update = true;
+        if ($this.hasClass('btn-primary')) {
+            need_update = false;
+        }
+
+        $('.btn-primary').removeClass('btn-primary');
+        $('.active').removeClass('active');
+
+        if (need_update) {
+            var elements = document.getElementsByClassName($this.attr('class').split(' ')[0]);
+            for(var i = 0; i < elements.length; i++) {
+                if (elements[i].classList.contains('btn')) {
+                    elements[i].classList.add('btn-primary');
+                } else {
+                    elements[i].classList.add('active');
+                }
+            }
+        }
+    });
+</script>
+
+    </div>
+</div>
+    <script type='text/javascript'>
+    $(function () {
+        $('.timepicker').each(function(){
+            $(this).datetimepicker({format: 'DD.MM.YYYY HH:mm'});
+        });
+    });
+    </script>
+</body>
+</html>

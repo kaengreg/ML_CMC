@@ -1,0 +1,1 @@
+find_modified_max_argmax = lambda L, f, i=-1: max([(f(x), (i := i + 1)) for x in L if type(x) == int] + [()])
